@@ -1,0 +1,1 @@
+{"ratings": [{"name": ["\nPride Plaza Hotel, Aerocity New Delhi\n"], "rating": ["7.9"]}, {"name": ["\nFabHotel The Daffodils Connaught Place\n"], "rating": ["6.1"]}, {"name": ["\nAirport Hotel Almati Inn\n"], "rating": ["7.2"]}, {"name": ["\nGG Bed And Breakfast\n"], "rating": ["9.3"]}, {"name": ["\nAero Look\n"], "rating": ["8.8"]}]}

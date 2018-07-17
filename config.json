@@ -1,0 +1,14 @@
+{
+	"htmltags": {
+	"base_url": "https://www.booking.com/",
+	"hotelslistelement": "//div[@id='hotellist_inner']",
+	"searchelementtag": "ByXpath",
+	"hotelelementclass": "//div[@class='sr_item sr_item_new sr_item_default sr_property_block  sr_flex_layout ']",
+	"namecss": ".sr-hotel__name::text",
+	"linkpath": ".//a[@class='hotel_name_link url']/@href",
+	"ratingpath": ".//span[@class='review-score-badge']/text()",
+	"roomtype": ".//span[@class='room_link']/text()",
+	"pricepath": ".//strong[@class=' price scarcity_color']/text()"
+
+	}
+}
