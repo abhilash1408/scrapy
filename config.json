@@ -10,7 +10,11 @@
 	"roomtype": "hotel_2540654",
 	"checkin": "checkin=2018-07-18;",
 	"checkout": "checkout=2018-07-20;",
-	"pricepath": ".//strong[@class=' price scarcity_color']/text()"
+	"pricepath": ".//strong[@class=' price scarcity_color']/text()",
+	"title": ".//h2[@id='hp_hotel_name']/text()",
+	"starsElement": ".hp__hotel_ratings__stars",
+	"stars" : ".invisible_spoken::text"
+
 
 	}
 }

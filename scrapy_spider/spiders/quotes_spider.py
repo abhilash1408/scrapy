@@ -15,10 +15,14 @@ class QuotesSpiderSpider(scrapy.Spider):
             config = json.load(json_file)
             sel = Selector(response)
             hotelsLinks = sel.xpath(config["htmltags"]["linkpath"]).extract()
-            for i in hotelsLinks:
-                link = i[1:-1]
-                link = link.split('?',1)
-                yield scrapy.Request(config["htmltags"]["base_url"]+link[0]+config["htmltags"]["checkin"]+config["htmltags"]["checkout"],callback=self.parse_hotel)
+            i = hotelsLinks[0]
+            link = i[1:-1]
+            link = link.split('?',1)
+            yield scrapy.Request(config["htmltags"]["base_url"]+link[0]+config["htmltags"]["checkin"]+config["htmltags"]["checkout"],callback=self.parse_hotel)
+            # for i in hotelsLinks:
+            #     link = i[1:-1]
+            #     link = link.split('?',1)
+            #     yield scrapy.Request(config["htmltags"]["base_url"]+link[0]+config["htmltags"]["checkin"]+config["htmltags"]["checkout"],callback=self.parse_hotel)
 
             # hotel={}
             # hotel['name']=hotelsList.css(config["htmltags"]["namecss"]).extract_first()[1:-1]
@@ -29,8 +33,19 @@ class QuotesSpiderSpider(scrapy.Spider):
             #hotel['price'] =i.xpath(config["htmltags"]["pricepath"]).extract()
 
     def parse_hotel(self,response):
-        sel = Selector(response)
-        hotel={}
+        with open('config.json') as json_file:
+            config = json.load(json_file)
+            hotel={}
+            sel = Selector(response)
+            hotel['title']=sel.xpath(config["htmltags"]["title"])[0].extract()[1:-1]
+
+            starsElement = sel.css(config["htmltags"]["starsElement"])
+            hotel['stars'] = starsElement.css(config["htmltags"]["stars"])[0].extract()
+            address = sel.css("#showMap2")
+            ad = address.xpath("span/text()")[0].extract()
+            hotel['address'] = ad[1:-1]
+            print(hotel)
+        
         
                 
 
