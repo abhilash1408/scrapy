@@ -44,7 +44,7 @@ class QuotesSpiderSpider(scrapy.Spider):
             address = sel.css("#showMap2")
             ad = address.xpath("span/text()")[0].extract()
             hotel['address'] = ad[1:-1]
-            print(hotel)
+            self.items.append(hotel)
         
         
                 

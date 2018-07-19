@@ -1,20 +1,34 @@
 {
-	"htmltags": {
-	"base_url": "https://www.booking.com",
-	"hotelslistelement": "//div[@id='hotellist_inner']",
-	"searchelementtag": "ByXpath",
-	"hotelelementclass": ".sr_item",
-	"namecss": ".sr-hotel__name::text",
-	"linkpath": ".//a[@class='hotel_name_link url']/@href",
-	"ratingpath": ".//span[@class='review-score-badge']/text()",
-	"roomtype": "hotel_2540654",
-	"checkin": "checkin=2018-07-18;",
-	"checkout": "checkout=2018-07-20;",
-	"pricepath": ".//strong[@class=' price scarcity_color']/text()",
-	"title": ".//h2[@id='hp_hotel_name']/text()",
-	"starsElement": ".hp__hotel_ratings__stars",
-	"stars" : ".invisible_spoken::text"
+	"htmltags":{
+		"base_url": "https://www.booking.com",
+		"hotelslistelement": "//div[@id='hotellist_inner']",
+		"searchelementtag": "ByXpath",
+		"hotelelementclass": ".sr_item",
+		"namecss": ".sr-hotel__name::text",
+		"linkpath": ".//a[@class='hotel_name_link url']/@href",
+		"ratingpath": ".//span[@class='review-score-badge']/text()",
+		"roomtype": "hotel_2540654",
+		"checkin": "checkin=2018-07-19;",
+		"checkout": "checkout=2018-07-21;",
+		"pricepath": ".//strong[@class=' price scarcity_color']/text()",
+		"title": ".//h2[@id='hp_hotel_name']/text()",
+		"stars" : "/html/body/div[3]/div[1]/div[3]/div[1]/div[1]/div[3]/div[1]/span/span[1]/i/span/text()",
+		"addressPath": "/html/body/div[3]/div[1]/div[3]/div[1]/div[1]/div[3]/p/span/text()"
+	},
 
-
+	"queryparams": {
+		"searchbyhotel": true,
+		"searchbyPlace": false,
+		"results": 5,
+		"no_rooms" : "1",
+		"group_adults":"2",
+		"group_children":"0",
+		"ss":"New+Delhi",
+		"checkin_monthday":"19",
+		"checkin_month":"7",
+		"checkin_year":"2018",
+		"checkout_monthday":"22",
+		"checkout_month":"7",
+		"checkout_year":"2018"
 	}
 }
